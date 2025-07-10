@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🗣️ PDF Voice Reader</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🗣️ PDF Voice Reader</h1>
+    <p class="subtitle">Upload a <strong>PDF</strong> or <strong>HTML</strong> file to hear it spoken aloud by AI 🤖</p>
+
+    <form method="POST" enctype="multipart/form-data" class="upload-form">
+      <input type="file" name="pdf_file" accept=".pdf,.html" required>
+      <button type="submit">🔊 Read Aloud</button>
+    </form>
+
+    {% if text %}
+    <div class="output">
+      <h3>📄 Extracted Text</h3>
+      <textarea readonly rows="15">{{ text }}</textarea>
+    </div>
+    {% else %}
+    <p class="no-text">⚠️ No readable text found. Please try another file.</p>
+    {% endif %}
+  </div>
+</body>
+</html>

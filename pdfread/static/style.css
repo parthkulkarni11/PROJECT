@@ -1,0 +1,100 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  margin: 0;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: #ffffff;
+  padding: 40px;
+  width: 90%;
+  max-width: 720px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.6s ease-out;
+}
+
+h1 {
+  color: #ff6b81;
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #444;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #ffa502;
+  border-radius: 8px;
+  background: #fffaf0;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff6b81, #ffa502);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ffa502, #ff6b81);
+}
+
+.output {
+  margin-top: 30px;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  resize: vertical;
+  background: #fefefe;
+  color: #333;
+  line-height: 1.5;
+}
+
+.no-text {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
